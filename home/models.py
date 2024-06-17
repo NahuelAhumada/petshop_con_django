@@ -18,3 +18,5 @@ class Producto(models.Model):
 
     def __str__(self,):
         return self.producto + " --- " +str(self.fecha_publicacion)
+class Marca(models.Model):
+    nombre =models.CharField(max_length=200)
