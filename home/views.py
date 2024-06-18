@@ -7,3 +7,6 @@ def index(request):
 def product(request):
     params = {}
     return  render(request, 'home/product.html')
+def carrito(request):
+    params = {}
+    return  render(request, 'home/carrito.html')

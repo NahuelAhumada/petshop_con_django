@@ -1,5 +1,48 @@
 {% extends 'home/main.html'%}
 {% load static %}
 {% block content %}
-    <h3>Carrito</h3>
+    <h1>Carrito</h1>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="item-contenido">
+                <br>
+                <table class="table">
+                    <tr>
+                        <th><h5>Items: <strong>3</strong></h5></th>
+                        <th><h5>Total: <strong>$42</strong></h5></th>
+                        <th>
+                            <a style="float: right; margin: 5px;" class="btn btn-success" href="#">Checkout</a>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <div class="item-contenido">
+                <div class="fila-carrito">
+                    <div style="flex:2"></div>
+                    <div style="flex:2"><strong>Item</strong></div>
+                    <div style="flex:1"><strong>Precio</strong></div>
+                    <div style="flex:1"><strong>Cantidad</strong></div>
+                    <div style="flex:1"><strong>Total</strong></div>
+                </div>
+                <div class="fila-carrito">
+                    <div style="flex:2;"><img class="imagen-fila" src="/media/Alimento-dog-selection.webp"></div>
+                    <div style="flex:2;  margin: auto;"><strong>Producto 1</strong></div>
+                    <div style="flex:1;  margin: auto;"><strong>$1500</strong></div>
+                    <div style="flex:1; margin: auto;" class="row">
+                        <p class="cantidad col-6">2</p>
+                        <div class="cantidad col-6">
+                            <img class="flecha-cantidad" src="/media/arrow_up_icon.png">
+                            <img class="flecha-cantidad" src="/media/arrow_down_icon.png">
+                        </div>
+                        
+                    </div>
+                    <div style="flex:1;  margin: auto;"><strong>Total</strong></div>
+                </div>
+            </div>
+            
+                
+            
+        </div>
+    </div>
 {% endblock content %}
