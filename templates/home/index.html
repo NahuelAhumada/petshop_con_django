@@ -29,14 +29,18 @@
     </div>
     <br>
     <div class="row">
-      {% for producto in productos %} 
+      {% for producto in productos|slice:':3' %} 
       <div class="col-12 col-sm-6 col-md-4">
           <div class="card mt-5 mb-5">
               <img src="/media/producto/kitty.png" style="width: 100%;">
               <div class="card-body">
-                  <h5 class="card-title">{{producto.producto}}</h5>
+                  <h5 class="card-title center">{{producto.producto}}</h5>
+                  <h4 class="center">${{producto.precio}}</h4>
                   <br>
-                  <a href="#" class="btn btn-primary">Ver</a>
+                  <section class="d-flex justify-content-around">
+                    <a href="#" class="btn btn-primary ">Ver</a>
+                    <a href="#" class="btn btn-secondary">Añadir al carrito</a>
+                  </section>
               </div>
           </div>
         </div>
