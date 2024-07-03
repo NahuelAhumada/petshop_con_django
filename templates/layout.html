@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <header class="col-12">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-4 col-sm-12 center">
+                    <img src="/media/logo.jpg" style="width: 70px; height: 70px;">
+                </div>
+                <div class="col-md-4 col-sm-12 center">
+                    <div class="input-group">
+                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                        <button type="button" class="btn btn-outline-primary" data-mdb-ripple-init>search</button>
+                    </div>
+                </div>
+                <div class="center col-md-4 col-sm-12">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#iniciar_sesion">INICIAR SESION</button>
+                    <a href="#" class="btn">REGISTRARSE</a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="iniciar_sesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            ...
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary">Iniciar sesion</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item px-5">
+                    <a class="nav-link" href="#"><strong>Inicio</strong></a>
+                  </li>
+                  <li class="nav-item px-5">
+                    <a class="nav-link" href="#"><strong>Productos</strong></a>
+                  </li>
+                  <li class="nav-item px-5">
+                    <a class="nav-link" href="#"><strong>Ayuda</strong></a>
+                  </li>
+                  <li class="nav-item px-5">
+                    <a class="nav-link" href="#"><strong>Contacto</strong></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </div>
+</div>
+<div class="container-fluid">
+    {% block content_home %}
+
+    {% endblock %}
+</div> 
+<div class="container-fluid">
+    <div class="row">
+        <footer class="col-12 center">
+          <br>
+            <p style="color: white;">Seguinos:</p>
+            <br>
+            <div class="flex-centrado">
+              <img class="conf-icono" src="/media/icono-whatsapp.png">
+              <img class="conf-icono" src="/media/icono-instagram-color.png">
+              <img class="conf-icono" src="/media/icono-youtube.png">
+              <img class="conf-icono" src="/media/icono de tiktok.png">
+            </div>
+        </footer>
+    </div>
+</div>
+{% endblock %}

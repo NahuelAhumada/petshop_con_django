@@ -1,6 +1,6 @@
-{% extends 'home/main.html'%}
+{% extends "layout.html" %}
 {% load static %}
-{% block content %}
+{% block content_home %}
     <div class="row">
         <section class="col-12">
             <div id="carouselExampleFade" class="carousel slide carousel-fade">
@@ -30,8 +30,8 @@
     <br>
     <div class="row">
       {% for producto in productos %} 
-      <div class="col-12 col-sm-6 col-md-4 art">
-          <div class="card">
+      <div class="col-12 col-sm-6 col-md-4">
+          <div class="card mt-5 mb-5">
               <img src="/media/producto/kitty.png" style="width: 100%;">
               <div class="card-body">
                   <h5 class="card-title">{{producto.producto}}</h5>
@@ -43,4 +43,4 @@
       {% endfor %}
     </div>
 
-{% endblock content %}
+{% endblock %}

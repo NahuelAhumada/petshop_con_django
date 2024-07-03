@@ -51,3 +51,11 @@ footer{background-color: black;}
 .nav-link{
     color: white;
 }
+
+.carousel-item img{
+    height: 550px;
+}
+
+.card-body{
+    min-height: 180px;
+}
