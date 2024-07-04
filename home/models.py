@@ -7,11 +7,12 @@ class Cliente(models.Model):
     nombre = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
     def __str__(self):
-        return 's%' % self.nombre
+        return self.nombre
 class Orden(models.Model):
     cliente = models.ForeignKey(Cliente, on_delete=models.SET_NULL, blank=True, null=True)
     fecha_de_creacion = models.DateTimeField('Fecha de orden')
     completada = models.BooleanField(default=False, null=True, blank=False)
+    id_transaccion = models.CharField(max_length=200, null=True)
 class Categoria(models.Model):
     nombre = models.CharField(max_length=100, db_index=True)
     slug = models.SlugField(max_length=100, db_index=True)

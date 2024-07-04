@@ -10,7 +10,9 @@ def index(request):
     return render(request, 'home/index.html', params)
 def product(request):
     params = {}
-    return  render(request, 'home/producto.html')
+    return  render(request, 'home/producto.html', params)
 def carrito(request):
+    if request.user.is_authenticated:
+        cliente = request.user.cliente
     params = {}
-    return  render(request, 'home/carrito.html')
+    return  render(request, 'home/carrito.html', params)
