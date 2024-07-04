@@ -12,7 +12,6 @@ def product(request):
     params = {}
     return  render(request, 'home/producto.html', params)
 def carrito(request):
-    if request.user.is_authenticated:
-        cliente = request.user.cliente
-    params = {}
+    productos_orden=Orden_Producto.objects.all()
+    params = {'productos_orden':productos_orden}
     return  render(request, 'home/carrito.html', params)

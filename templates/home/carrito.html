@@ -9,7 +9,7 @@
                 <table class="table">
                     <tr>
                         <th><h5>Items: <strong>3</strong></h5></th>
-                        <th><h5>Total: <strong>$42</strong></h5></th>
+                        <th><h5>Total: <strong> $42</strong></h5></th>
                         <th>
                             <a style="float: right; margin: 5px;" class="btn btn-success" href="#">Checkout</a>
                         </th>
@@ -25,20 +25,22 @@
                     <div style="flex:1"><strong>Cantidad</strong></div>
                     <div style="flex:1"><strong>Total</strong></div>
                 </div>
+                {% for producto_orden in productos_orden %}
                 <div class="fila-carrito">
-                    <div style="flex:2;"><img class="imagen-fila" src="/media/Alimento-dog-selection.webp"></div>
-                    <div style="flex:2;  margin: auto;"><strong>Producto 1</strong></div>
-                    <div style="flex:1;  margin: auto;"><strong>$1500</strong></div>
+                    <div style="flex:2;"><img class="imagen-fila-carrito" src="{{producto_orden.producto.imagen.url}}"></div>
+                    <div style="flex:2;  margin: auto;"><strong>{{producto_orden.producto.producto}}</strong></div>
+                    <div style="flex:1;  margin: auto;"><strong>{{producto_orden.producto.precio}}</strong></div>
                     <div style="flex:1; margin: auto;" class="row">
-                        <p class="cantidad col-6">2</p>
+                        <p class="cantidad col-6">{{producto_orden.cantidad}}</p>
                         <div class="cantidad col-6">
                             <img class="flecha-cantidad" src="/media/arrow_up_icon.png">
                             <img class="flecha-cantidad" src="/media/arrow_down_icon.png">
                         </div>
                         
                     </div>
-                    <div style="flex:1;  margin: auto;"><strong>Total</strong></div>
+                    <div style="flex:1;  margin: auto;"><strong>{{producto_orden.total}}</strong></div>
                 </div>
+                {% endfor %}
             </div>
             
                 

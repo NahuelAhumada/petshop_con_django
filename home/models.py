@@ -39,6 +39,9 @@ class Orden_Producto(models.Model):
     orden = models.ForeignKey(Orden, on_delete=models.SET_NULL, blank=True, null=True)
     cantidad = models.IntegerField(default=0, null=True)
 
+    def total(self):
+        return self.cantidad*self.producto.precio
+
 class Envio(models.Model):
     cliente = models.ForeignKey(Cliente, on_delete=models.SET_NULL, blank=True, null=True)
     orden = models.ForeignKey(Orden, on_delete=models.SET_NULL, blank=True, null=True)
