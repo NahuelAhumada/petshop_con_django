@@ -3,7 +3,15 @@ body{
 }
 header{background-color: white;}
 
-footer{background-color: black;}
+
+#contenido_principal{
+    min-height: 100vh;
+    padding-bottom: 165px;
+}
+footer{
+    height: 165px;
+    background-color: black;
+}
 
 .center{
     text-align: center;
