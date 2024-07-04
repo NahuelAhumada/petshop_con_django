@@ -13,5 +13,6 @@ def product(request):
     return  render(request, 'home/producto.html', params)
 def carrito(request):
     productos_orden=Orden_Producto.objects.all()
-    params = {'productos_orden':productos_orden}
+    ordenes = Orden.objects.get(id=1)
+    params = {'productos_orden':productos_orden, 'ordenes':ordenes}
     return  render(request, 'home/carrito.html', params)

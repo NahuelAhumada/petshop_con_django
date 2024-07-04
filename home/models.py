@@ -13,6 +13,17 @@ class Orden(models.Model):
     fecha_de_creacion = models.DateTimeField('Fecha de orden')
     completada = models.BooleanField(default=False, null=True, blank=False)
     id_transaccion = models.CharField(max_length=200, null=True)
+
+    @property
+    def precio_total_carrito(self):
+        orden_producto = self.orden_producto_set.all()
+        total=sum([producto.total() for producto in orden_producto])
+        return total
+    @property
+    def cantidad_total_carrito(self):
+        orden_producto = self.orden_producto_set.all()
+        total=sum([producto.cantidad for producto in orden_producto])
+        return total
 class Categoria(models.Model):
     nombre = models.CharField(max_length=100, db_index=True)
     slug = models.SlugField(max_length=100, db_index=True)
