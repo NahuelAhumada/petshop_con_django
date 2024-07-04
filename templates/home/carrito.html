@@ -1,26 +1,13 @@
 {% extends 'layout.html'%}
 {% load static %}
 {% block content_home %}
-    <h1>Carrito</h1>
+    <h1>Su Carrito</h1>
     <div class="row">
         <div class="col-lg-12">
             <div class="item-contenido">
-                <br>
-                <table class="table">
-                    <tr>
-                        <th><h5>Items: <strong>{{ordenes.cantidad_total_carrito}}</strong></h5></th>
-                        <th><h5>Total: <strong> ${{ordenes.precio_total_carrito}}</strong></h5></th>
-                        <th>
-                            <a style="float: right; margin: 5px;" class="btn btn-success" href="#">Continuar</a>
-                        </th>
-                    </tr>
-                </table>
-            </div>
-            <br>
-            <div class="item-contenido">
                 <div class="fila-carrito">
                     <div style="flex:2"></div>
-                    <div style="flex:2"><strong>Item</strong></div>
+                    <div style="flex:2"><strong>Producto</strong></div>
                     <div style="flex:1"><strong>Precio</strong></div>
                     <div style="flex:1"><strong>Cantidad</strong></div>
                     <div style="flex:1"><strong>Total</strong></div>
@@ -42,9 +29,19 @@
                 </div>
                 {% endfor %}
             </div>
-            
-                
-            
+            <br>
+            <div class="item-contenido">
+                <br>
+                <table class="d-flex justify-content-end mx-5">
+                    <tr>
+                        <th><h5 class="mx-5">Cantidad de articulos: <strong>{{ordenes.cantidad_total_carrito}}</strong></h5></th>
+                        <th><h5 class="mx-5">Precio final: <strong> ${{ordenes.precio_total_carrito}}</strong></h5></th>
+                        <th>
+                            <a class="btn btn-success mx-5" href="#">Continuar</a>
+                        </th>
+                    </tr>
+                </table>
+            </div>    
         </div>
     </div>
 {% endblock content_home %}
