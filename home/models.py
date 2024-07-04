@@ -26,12 +26,19 @@ class Producto(models.Model):
 
     def __str__(self,):
         return self.producto + " --- " +str(self.fecha_publicacion)
+"""     @property
+    def url_imagen(self):
+        try:
+            url = self.imagen.url
+        except:
+            url = ''
+        return url """
 class Orden_Producto(models.Model):
     producto = models.ForeignKey(Producto, on_delete=models.SET_NULL, blank=True, null=True)
     orden = models.ForeignKey(Orden, on_delete=models.SET_NULL, blank=True, null=True)
     cantidad = models.IntegerField(default=0, null=True)
 
-class Envios(models.Model):
+class Envio(models.Model):
     cliente = models.ForeignKey(Cliente, on_delete=models.SET_NULL, blank=True, null=True)
     orden = models.ForeignKey(Orden, on_delete=models.SET_NULL, blank=True, null=True)
     fecha_agregado = models.DateTimeField(auto_now_add=True)
