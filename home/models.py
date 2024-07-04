@@ -57,6 +57,6 @@ class Orden_Producto(models.Model):
 
     def total(self):
         return self.cantidad*self.producto.precio
-
+    
 
     
