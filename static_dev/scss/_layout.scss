@@ -1,0 +1,23 @@
+header{
+	background-color: $color_blanco;
+	.row{
+		.center{
+			text-align: center;
+			align-content: center;
+		}
+	}
+}
+
+.elementos-navbar{
+	.nav-link{
+		color: $color_texto_navbar;
+	}
+	.nav-link:hover{
+		color: $color_texto_navbar_hover;
+	}
+}
+
+footer{
+    height: 165px;
+    background-color: $color_background_footer;
+}
