@@ -24,6 +24,8 @@ class Orden(models.Model):
         orden_producto = self.orden_producto_set.all()
         total=sum([producto.cantidad for producto in orden_producto])
         return total
+    def __str__(self):
+        return self.cliente.nombre + ' - ' + self.id_transaccion
 class Marca(models.Model):
     nombre =models.CharField(max_length=100)
     def __str__(self):
