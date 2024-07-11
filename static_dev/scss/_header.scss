@@ -1,19 +1,4 @@
 
-
-#contenido_principal{
-    min-height: 100vh;
-    padding-bottom: 165px;
-}
-footer{
-    height: 165px;
-    background-color: black;
-}
-
-.center{
-    text-align: center;
-    align-content: center;
-}
-
 .item-contenido{
     box-shadow: hsl(0, 0%, 80%) 0 0 16px;
     background-color: $color_blanco;
@@ -42,22 +27,7 @@ footer{
     cursor: pointer;
     display: block;
 }
-.flex-centrado{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.conf-icono{
-    width: 25px;
-    margin-right: 10px;
-    padding-bottom: 50px;
-}
 
-.carousel-item img{
-    height: 550px;
-}
 
-.card-body{
-    min-height: 200px;
-}
+
 
