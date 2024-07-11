@@ -15,33 +15,13 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-12 center">
-                    <a href="/accounts/login/" class="btn">INICIAR SESSION</a>
+                  {% if user.is_authenticated %}
+                    <label style="color:blue">{{user.username}}</label>
+                    <a href="/accounts/login/" class="btn">CAMBIAR USUARIO</a>
+                  {% else %}
+                    <a href="/accounts/login/" class="btn">INICIAR SESION</a>
+                  {% endif %}
                     <a href="/carrito/" class="btn">CARRITO</a>
-                    <!-- Modal -->
-                    <div class="modal fade" id="iniciar_sesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog">
-                        <div class="modal-content d-flex justify-content-center">
-                          <div class="modal-header">
-                            <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Iniciar sesion</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="form-floating">
-                              <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
-                              <label for="floatingEmail">Email</label>
-                            </div>
-                            <br>
-                            <div class="form-floating">
-                              <input type="password" class="form-control" id="floatingContrasenia" placeholder="Password">
-                              <label for="floatingContrasenia">Contraseña</label>
-                            </div>
-                          </div>
-                          <div class="modal-footer justify-content-center">
-                            <button type="button" class="btn btn-primary">Iniciar sesion</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                 </div>
 
             </div>
