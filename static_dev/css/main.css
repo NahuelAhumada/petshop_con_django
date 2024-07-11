@@ -14801,6 +14801,7 @@ fieldset:disabled .btn {
 /* COLORES */
 /* Tamaño del footer, importante que sea igual al padding del contenido de la pagina*/
 /*Altura imagenes de carrusel*/
+/*Dimension de imagenes de articulo en el carrito*/
 /* line 1, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_base.scss */
 body {
   background-color: #e5e5e5;
@@ -14808,7 +14809,7 @@ body {
 
 /* line 1, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_layout.scss */
 header {
-  background-color: #ffffff;
+  background-color: white;
 }
 
 /* line 4, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_layout.scss */
@@ -14870,7 +14871,7 @@ footer .flex-centrado .conf-icono {
   height: 320px;
 }
 
-/* line 2, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_header.scss */
+/* line 1, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_carrito.scss */
 .item-contenido {
   box-shadow: #cccccc 0 0 16px;
   background-color: #ffffff;
@@ -14878,8 +14879,8 @@ footer .flex-centrado .conf-icono {
   padding: 10px;
 }
 
-/* line 8, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_header.scss */
-.fila-carrito {
+/* line 6, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_carrito.scss */
+.item-contenido .fila-carrito {
   display: flex;
   align-items: stretch;
   padding-bottom: 10px;
@@ -14887,22 +14888,22 @@ footer .flex-centrado .conf-icono {
   border-bottom: 1px #ececec;
 }
 
-/* line 15, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_header.scss */
-.imagen-fila-carrito {
+/* line 12, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_carrito.scss */
+.item-contenido .fila-carrito .imagen-fila-carrito {
   display: block;
   margin: auto;
   width: 45px;
   height: 100px;
 }
 
-/* line 21, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_header.scss */
-.cantidad {
+/* line 19, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_carrito.scss */
+.item-contenido .fila-carrito .row .cantidad {
   display: inline-block;
   padding-right: 10px;
 }
 
-/* line 25, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_header.scss */
-.flecha-cantidad {
+/* line 22, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_carrito.scss */
+.item-contenido .fila-carrito .row .cantidad .flecha-cantidad {
   width: 15px;
   cursor: pointer;
   display: block;

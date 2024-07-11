@@ -1,12 +1,17 @@
 /* COLORES */
 $color_de_fondo: #e5e5e5;
-$color_blanco: #ffffff; 
 $color_texto_navbar: #ffffff;
 $color_texto_navbar_hover: #222831;
+$color_background_header: white;
 $color_background_footer: black;
+$color_background_articulos_carritos: #ffffff;
 
 /* Tamaño del footer, importante que sea igual al padding del contenido de la pagina*/
 $altura_footer: 165px;
 
 /*Altura imagenes de carrusel*/
 $altura_imagen_carrusel: 550px;
+
+/*Dimension de imagenes de articulo en el carrito*/
+$altura_imagen_carrito: 100px;
+$anchura_imagen_carrito: 45px;
