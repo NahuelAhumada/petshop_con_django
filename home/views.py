@@ -12,7 +12,12 @@ def product(request):
     params = {}
     return  render(request, 'home/producto.html', params)
 def carrito(request):
-    productos_orden=Orden_Producto.objects.all()
-    ordenes = Orden.objects.get(id=1)
-    params = {'productos_orden':productos_orden, 'ordenes':ordenes}
+    if request.user.is_authenticated:
+        cliente = request.user.cliente
+        orden, orden_creada = Orden.objects.get_or_create(cliente=cliente, completada=False)
+        productos_orden = orden.orden_producto_set.all()
+    else:
+        productos_orden = []
+        orden={'precio_total_carrito':0, 'cantidad_total_carrito':0}
+    params = {'productos_orden':productos_orden, 'orden':orden}
     return  render(request, 'home/carrito.html', params)
