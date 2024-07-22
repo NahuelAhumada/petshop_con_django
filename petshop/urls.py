@@ -22,8 +22,9 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('home.urls')),
-    path('',include('ordenes.urls')),
-    path('',include('productos.urls')),
-    path('',include('contacto.urls')),
+    path('carrito/',include('ordenes.urls')),
+    path('producto/',include('productos.urls')),
+    path('contacto/',include('contacto.urls')),
+    path('captcha/',include('captcha.urls')),
     path('accounts/', include('registration.backends.default.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
