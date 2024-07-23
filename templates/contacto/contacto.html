@@ -1,0 +1,21 @@
+{% extends 'layout.html'%}
+{% load static %}
+{% block cuerpo_pagina %}
+    <div class="container-fluid">
+        <div class="row reflexion justify-content-around align-items-center border" style="padding-top:20px;">
+            <div class="col-12 col-md-8">
+                <form id="contact" action="" method="post" class="col-xs-12">{% csrf_token %} 		
+                    <div class="col-12 form-group" >
+                        {{form }}
+                    </div> 
+                    <div class="row justify-content-between">
+                       <div class="col-4"></div>
+                       <div class="col-4" style="padding-right:30px; margin-top: 20px;">
+                           <button type="submit"  class=" col-12 btn btn-info">Enviar</button>
+                      </div>
+                    </div>                        
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock cuerpo_pagina %}

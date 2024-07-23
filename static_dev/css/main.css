@@ -13373,4 +13373,14 @@ footer .flex-centrado .conf-icono {
   display: block;
 }
 
+/* line 3, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_contacto.scss */
+#contact .form-group input, #contact .form-group textarea {
+  width: 100%;
+}
+
+/* line 7, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_contacto.scss */
+#contact .form-group fieldset img {
+  margin-bottom: 20px;
+}
+
 /*# sourceMappingURL=main.css.map */
