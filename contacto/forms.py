@@ -9,7 +9,7 @@ class ConsultaForm(ModelForm):
         model = Consulta
         fields = [
             'nombre',
-            'descripcion',
+            'mensaje',
             'mail',
         ]
     def send_email(self, ):

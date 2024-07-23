@@ -12,7 +12,7 @@ class Consulta(models.Model):
         (ENPROCESO, 'En proceso'),
     )
     nombre = models.CharField(max_length=50,blank=True,null=True)
-    descripcion = models.TextField(blank=False,null=False)
+    mensaje = models.TextField(blank=False,null=False)
     mail = models.EmailField(max_length=50,blank=True,null=True)
     estado_respuesta = models.CharField(max_length=15,blank=True,null=True, choices=ESTADOS, default=NOCONTESTADA)
     fecha = models.DateTimeField(default=datetime.now, blank=True, editable=True)
