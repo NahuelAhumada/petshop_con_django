@@ -1,3 +1,14 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Consulta
+from .models import Respuesta
+
+class RespuestaInline(admin.TabularInline):
+    model=Respuesta
+    extra=0
+
+class ConsultaAdmin(admin.ModelAdmin):
+    inlines=[RespuestaInline]
+    list_display=['estado_de_respuesta','nombre','mensaje','mail','fecha']
+    list_filter=['estado_respuesta','fecha']
+admin.site.register(Consulta, ConsultaAdmin)
