@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row justify-content-around align-items-center">
         <div class="col-12 col-md-8">
-            <form action="/tienda/cargar/" method="post" enctype="multipart/form-data">{% csrf_token %}
+            <form id="formulario-producto" action="/tienda/cargar/" method="post" enctype="multipart/form-data">{% csrf_token %}
                 <div>
                     <label for="id_producto">Producto:</label>
                     <input type="text" name="producto" maxlength="200" required="" id="id_producto">
@@ -16,6 +16,10 @@
                     <input type="text" name="precio" maxlength="200" required="" id="id_precio">  
                 </div>
                 <div>
+                    <label for="id_descripcion">Descripcion</label>
+                    <textarea name="descripcion"  required id="id_descripcion"></textarea>  
+                </div>
+                <div>
                     <label for="id_fecha_publicacion">Fecha de publicacion:</label>
                     <input type="date" name="fecha_publicacion" required="" id="id_fecha_publicacion">    
                 </div>
@@ -23,8 +27,10 @@
                     <label for="id_imagen">Imagen:</label>
                     <input type="file" name="imagen" accept="image/*" id="id_imagen">
                 </div>
-                <div>
-                    <input type="submit" value="Submit">
+                <div class="row justify-content-between">
+                    <div class="col-4" style="padding-right:30px; margin-top: 20px;">
+                        <button type="submit" class=" col-12 btn btn-success"> Submit </button>
+                    </div>
                 </div>
             </form>
         </div>

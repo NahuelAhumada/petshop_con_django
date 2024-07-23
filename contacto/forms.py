@@ -14,7 +14,7 @@ class ConsultaForm(ModelForm):
         ]
     def send_email(self, ):
         nombre = self.cleaned_data['nombre']
-        descripcion = self.cleaned_data['descripcion']
+        mensaje= self.cleaned_data['mensaje']
         mail = self.cleaned_data['mail']
 
         #Logica de envio de mail

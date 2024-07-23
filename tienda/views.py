@@ -13,6 +13,7 @@ def cargar_imagen(request):
         if form.is_valid():
             producto = form.cleaned_data['producto']
             precio = form.cleaned_data['precio']
+            descripcion = form.cleaned_data['descripcion']
             fecha_publicacion = form.cleaned_data['fecha_publicacion']
             imagen = form.cleaned_data['imagen']
             nuevo_producto = Producto(producto = producto,precio = precio, fecha_publicacion =fecha_publicacion, imagen=imagen)

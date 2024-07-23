@@ -12,8 +12,9 @@ class Animal(models.Model):
     def __str__(self):
         return self.nombre
 class Producto(models.Model):
-    producto = models.CharField(max_length=200)
+    producto = models.CharField(max_length=50)
     precio= models.DecimalField(max_digits=12,decimal_places=2)
+    descripcion = models.TextField(max_length=500, default="")
     fecha_publicacion = models.DateTimeField('Fecha de publicación')
     imagen = models.ImageField(upload_to="producto/%Y/%m/%d", blank=True, null=True)
     animal = models.ForeignKey(Animal, blank=True, null=True, on_delete=models.CASCADE)

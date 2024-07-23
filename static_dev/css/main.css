@@ -13373,14 +13373,34 @@ footer .flex-centrado .conf-icono {
   display: block;
 }
 
-/* line 3, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_contacto.scss */
+/* line 1, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_contacto.scss */
+#contact {
+  padding-top: 120px;
+}
+
+/* line 4, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_contacto.scss */
 #contact .form-group input, #contact .form-group textarea {
   width: 100%;
 }
 
-/* line 7, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_contacto.scss */
+/* line 8, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_contacto.scss */
 #contact .form-group fieldset img {
   margin-bottom: 20px;
+}
+
+/* line 1, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_formulario.scss */
+#formulario-producto {
+  padding-top: 120px;
+}
+
+/* line 3, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_formulario.scss */
+#formulario-producto input, #formulario-producto textarea {
+  width: 100%;
+}
+
+/* line 6, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_formulario.scss */
+#formulario-producto textarea {
+  min-height: 180px;
 }
 
 /*# sourceMappingURL=main.css.map */
