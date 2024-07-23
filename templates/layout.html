@@ -48,7 +48,7 @@
                     <a class="nav-link" href="#"><strong>Ayuda</strong></a>
                   </li>
                   <li class="nav-item px-5">
-                    <a class="nav-link" href="#"><strong>Contacto</strong></a>
+                    <a class="nav-link" href="{% url 'contacto' %}"><strong>Contacto</strong></a>
                   </li>
                 </ul>
               </div>
@@ -57,7 +57,7 @@
     </div>
 </div>
 <div class="container-fluid" id="contenido_principal">
-    {% block content_home %}
+    {% block cuerpo_pagina %}
 
     {% endblock %}
 </div> 
