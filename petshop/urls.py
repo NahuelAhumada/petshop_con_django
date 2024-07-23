@@ -26,5 +26,6 @@ urlpatterns = [
     path('producto/',include('productos.urls')),
     path('contacto/',include('contacto.urls')),
     path('captcha/',include('captcha.urls')),
+    path('tienda/',include('tienda.urls')),
     path('accounts/', include('registration.backends.default.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
