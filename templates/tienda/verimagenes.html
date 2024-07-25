@@ -4,13 +4,24 @@
 {% block cuerpo_pagina %}
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                {% for producto in productos %}
-                    <a href="{% url 'ver' producto.id%}">
-                        <img src="/media/{{producto.imagen}}" style="width: 30%;"/>
-                    </a>
-                {% endfor %}
-            </div>
+            {% for producto in productos %}
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="card mt-5 mb-5">
+                        <img src="/media/{{producto.imagen}}" class="mx-auto"/>
+                        <div class="card-body">
+                            <h5 class="card-title centrado">{{producto.producto}}</h5>
+                            <h4 class="centrado">${{producto.precio}}</h4>
+                            <br>
+                            <section class="d-flex justify-content-around">
+                                <a href="{% url 'ver' producto.id%}" class="btn btn-dark">Ver</a>
+                                <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+
+            {% endfor %}    
         </div>
     </div>
 {% endblock %}
