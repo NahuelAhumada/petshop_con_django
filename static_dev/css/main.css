@@ -13319,20 +13319,25 @@ footer .flex-centrado .conf-icono {
 }
 
 /* line 1, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_index.scss */
-.center {
+.centrado {
   text-align: center;
   align-content: center;
 }
 
-/* line 9, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_index.scss */
+/* line 7, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_index.scss */
 .carousel-inner .carousel-item img {
   height: 550px;
 }
 
-/* line 16, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_index.scss */
+/* line 13, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_index.scss */
 .card img {
-  width: 50%;
+  width: 66.66%;
   height: 320px;
+}
+
+/* line 18, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_index.scss */
+.card .card-body h5, .card .card-body .h5 {
+  min-height: 72px;
 }
 
 /* line 1, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_carrito.scss */
@@ -13401,6 +13406,36 @@ footer .flex-centrado .conf-icono {
 /* line 6, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_formulario.scss */
 #formulario-producto textarea {
   min-height: 180px;
+}
+
+/* line 1, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_verimagen.scss */
+.ver-producto {
+  background-color: white;
+  margin-top: 10px;
+}
+
+/* line 4, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_verimagen.scss */
+.ver-producto img {
+  aspect-ratio: 0.8;
+  width: 80%;
+}
+
+/* line 8, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_verimagen.scss */
+.ver-producto h1, .ver-producto .h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-top: 20px;
+}
+
+/* line 12, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_verimagen.scss */
+.ver-producto p {
+  font-size: 24px;
+  padding-left: 15px;
+}
+
+/* line 17, ../../Programacion/UTN - Curso Django/python_virtual/diplo/archivos/petshop/static_dev/scss/_verimagen.scss */
+.ver-producto .descripcion-producto p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=main.css.map */
