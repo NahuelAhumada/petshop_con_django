@@ -38,7 +38,7 @@
                   <h4 class="centrado">${{producto.precio}}</h4>
                   <br>
                   <section class="d-flex justify-content-around">
-                    <a href="#" class="btn btn-dark">Ver</a>
+                    <a href="{% url 'ver' producto.id%}" class="btn btn-dark">Ver</a>
                     <a href="#" class="btn btn-primary">Añadir al carrito</a>
                   </section>
               </div>
