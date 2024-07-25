@@ -26,7 +26,7 @@ def cargar_imagen(request):
         return render(request, 'tienda/formulario.html', params)
     
 class VerImagenes(View):
-    template = "tienda/verimagenes.html"
+    template = "tienda/verproductos.html"
 
     def get(self, request):
         params={}
@@ -45,4 +45,4 @@ def ver_imagen(request, producto_id):
     except Producto.DoesNotExist:
         raise Http404
     params["producto"]=producto
-    return render(request, "tienda/verimagen.html",params)
+    return render(request, "tienda/verproducto.html",params)
