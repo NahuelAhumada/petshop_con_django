@@ -5,16 +5,16 @@
     <div class="row">
         <header class="col-12">
             <div class="row d-flex justify-content-center">
-                <div class="col-md-4 col-sm-12 center">
+                <div class="col-md-4 col-sm-12 centrado">
                     <img src="/media/logo.jpg" style="width: 70px; height: 70px;">
                 </div>
-                <div class="col-md-4 col-sm-12 center">
+                <div class="col-md-4 col-sm-12 centrado">
                     <div class="input-group">
                         <input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
                         <button type="button" class="btn btn-outline-primary" data-mdb-ripple-init>Buscar</button>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 center">
+                <div class="col-md-4 col-sm-12 centrado">
                   {% if user.is_authenticated %}
                     <label style="color:blue">{{user.username}}</label>
                     <a href="/accounts/login/" class="btn">CAMBIAR USUARIO</a>
@@ -42,7 +42,7 @@
                     <a class="nav-link" href="{% url 'home' %}"><strong>Inicio</strong></a>
                   </li>
                   <li class="nav-item px-5">
-                    <a class="nav-link" href="#"><strong>Productos</strong></a>
+                    <a class="nav-link" href="{% url 'verimagenes' %}"><strong>Productos</strong></a>
                   </li>
                   <li class="nav-item px-5">
                     <a class="nav-link" href="{% url 'cargar' %}"><strong>Tienda</strong></a>
@@ -63,7 +63,7 @@
 </div> 
 <div class="container-fluid">
     <div class="row">
-        <footer class="col-12 center">
+        <footer class="col-12 centrado">
           <br>
           <p style="color: white;">Seguinos:</p>
           <br>
