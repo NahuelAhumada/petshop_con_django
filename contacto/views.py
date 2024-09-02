@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import View
 from django.views.generic import FormView
-from contacto.models import Consulta
 from contacto.forms import ConsultaForm
 # Create your views here.
 class Contacto(FormView):
