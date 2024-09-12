@@ -28,6 +28,12 @@
 
     </div>
     <br>
+
+    <div id="intro-m">
+        <h1>Bienvenidos a Vida Silvestre</h1>
+        <h2>Un sitio diseñado por Nahuel Ahumada</h2>
+    </div>
+    <br>
     <div class="row">
       {% for producto in productos|slice:':3' %} 
       <div class="col-12 col-sm-6 col-md-4">
@@ -48,3 +54,35 @@
     </div>
 
 {% endblock %}
+
+{% block javascript %}
+<script type="text/javascript" src="{% static 'js/minified/gsap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/minified/ScrollTrigger.min.js' %}"></script>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.set('#intro-m', {
+    backgroundColor:'red'
+  });
+
+  let tl = gsap.timeline({
+  scrollTrigger:{
+    trigger: '#intro-m',
+    start: "top 60%",
+    end: "+=100",
+    markers: true,
+    scrub: 3,
+    //toggleActions: "play pause reverse pause"
+  }
+  });
+  tl.from('#intro-m', {
+  opacity:0,
+	x: -150, 
+	duration: 0.1, 
+  }
+  );
+
+  
+</script>
+{% endblock %} 
