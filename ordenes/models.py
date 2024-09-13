@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 from productos.models import Producto
-from home.models import Cliente
+from usuarios.models import Cliente
 
 class Orden(models.Model):
     cliente = models.ForeignKey(Cliente, on_delete=models.SET_NULL, blank=True, null=True)

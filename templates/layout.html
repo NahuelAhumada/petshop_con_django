@@ -17,9 +17,9 @@
                 <div class="col-md-4 col-sm-12 centrado">
                   {% if user.is_authenticated %}
                     <label style="color:blue">{{user.username}}</label>
-                    <a href="/accounts/login/" class="btn">CAMBIAR USUARIO</a>
+                    <a href="{% url 'logout' %}" class="btn">CERRAR SESSION</a>
                   {% else %}
-                    <a href="/accounts/login/" class="btn">INICIAR SESION</a>
+                    <a href="{% url 'login' %}" class="btn">INICIAR SESION</a>
                   {% endif %}
                     <a href="/carrito/" class="btn">CARRITO</a>
                 </div>
