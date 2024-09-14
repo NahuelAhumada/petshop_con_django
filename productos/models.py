@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils.html import format_html
 # Create your models here.
 class Marca(models.Model):
     nombre =models.CharField(max_length=100)
@@ -12,15 +12,46 @@ class Animal(models.Model):
     def __str__(self):
         return self.nombre
 class Producto(models.Model):
+    Borrador = "Borrador"
+    Publicado = "Publicado"
+    Retirado = "Retirado"
+    APROBACION_PRODUCTO = (
+        (Borrador, "Borrador"),
+        (Publicado, "Publicado"),
+        (Retirado, "Retirado"),
+    )
+    estado = models.CharField(
+        max_length=10, choices=APROBACION_PRODUCTO, default="Borrador"
+    )
     producto = models.CharField(max_length=50)
     precio= models.DecimalField(max_digits=12,decimal_places=2)
     descripcion = models.TextField(max_length=500, default="")
     fecha_publicacion = models.DateTimeField('Fecha de publicación')
     imagen = models.ImageField(upload_to="producto/%Y/%m/%d", blank=True, null=True)
+    stock = models.IntegerField(default=0)
+    descuento = models.IntegerField(default=0)
     animal = models.ForeignKey(Animal, blank=True, null=True, on_delete=models.CASCADE)
     marca = models.ForeignKey(Marca, blank=True, null=True, on_delete=models.CASCADE)
+    
     def __str__(self,):
         return self.producto + " --- " +str(self.fecha_publicacion)
+    
+    def estado_de_producto(self):
+        if self.estado == "Retirado":
+            return format_html(
+                '<span style="color: #f00;">{}</span>',
+                self.estado,
+            )
+        elif self.estado == "Borrador":
+            return format_html(
+                '<span style="background-color: #f0f; padding:7px;">{}</span>',
+                self.estado,
+            )
+        elif self.estado == "Publicado":
+            return format_html(
+                '<span style="color: #099;">{}</span>',
+                self.estado,
+            )
 """ @property
     def url_imagen(self):
         try:
