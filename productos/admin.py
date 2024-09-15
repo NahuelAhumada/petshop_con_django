@@ -2,6 +2,7 @@ from django.contrib import admin
 from productos.models import *
 from django.http import HttpResponse
 from django.core import serializers
+from django.shortcuts import render
 
 @admin.register(Producto)
 class ProductoAdmin(admin.ModelAdmin):
@@ -29,7 +30,7 @@ class ProductoAdmin(admin.ModelAdmin):
     list_filter = ('producto', 'fecha_publicacion',)
     search_fields=('producto', 'estado',)
     list_display_links = ('producto', 'fecha_publicacion',)
-    actions=["publicar", "exportar_a_json"]
+    actions=["publicar", "exportar_a_json", "ver_productos"]
 
     def publicar(self, request, queryset):
         registro=queryset.update(estado="Publicado")
@@ -44,7 +45,15 @@ class ProductoAdmin(admin.ModelAdmin):
         response = HttpResponse(content_type="application/json")
         serializers.serialize("json",queryset,stream=response)
         return response
-
+    def ver_productos(self, request, queryset):
+        params={}
+        productos=Producto.objects.all
+        params["productos"]=productos
+        return render(request, "admin/productos/productos.html",params)
+    ver_productos.short_description = "Ver productos"
 
 admin.site.register(Animal)
-admin.site.register(Marca)
+@admin.register(Marca)
+class MarcaAdmin(admin.ModelAdmin):
+    list_display = ['nombre']
+    ordering = ['nombre']
